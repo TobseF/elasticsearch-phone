@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.inin.analytics</groupId>
@@ -13,10 +13,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.sourceVersion>1.7</project.build.sourceVersion>
-        <elasticsearch.version>5.1.1</elasticsearch.version>
+        <elasticsearch.version>5.2.0</elasticsearch.version>
         <lucence.version>6.3.0</lucence.version>
         <junit.version>4.12</junit.version>
-                <elasticsearch.assembly.descriptor>${basedir}/src/main/assemblies/plugin.xml</elasticsearch.assembly.descriptor>
+        <elasticsearch.assembly.descriptor>${basedir}/src/main/assemblies/plugin.xml</elasticsearch.assembly.descriptor>
     </properties>
 
     <licenses>
@@ -121,7 +121,7 @@
             <artifactId>jna</artifactId>
             <version>4.2.1</version>
             <scope>test</scope>
-        </dependency>   
+        </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -192,10 +192,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-<!--
-                    <source>${project.build.sourceVersion}</source>
-                    <target>${project.build.sourceVersion}</target>
--->
+                    <!--
+										<source>${project.build.sourceVersion}</source>
+										<target>${project.build.sourceVersion}</target>
+					-->
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
@@ -215,10 +215,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
                 <version>2.2.1</version>
                 <executions>
                     <execution>
@@ -229,25 +225,25 @@
                     </execution>
                 </executions>
             </plugin>
-<!--
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.5</version>
-                <configuration>
-                    <executable>gpg</executable>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
--->
+            <!--
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-gpg-plugin</artifactId>
+							<version>1.5</version>
+							<configuration>
+								<executable>gpg</executable>
+							</configuration>
+							<executions>
+								<execution>
+									<id>sign-artifacts</id>
+									<phase>verify</phase>
+									<goals>
+										<goal>sign</goal>
+									</goals>
+								</execution>
+							</executions>
+						</plugin>
+			-->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.6</version>
