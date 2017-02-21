@@ -13,7 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.sourceVersion>1.7</project.build.sourceVersion>
-        <elasticsearch.version>5.2.0</elasticsearch.version>
+        <elasticsearch.version>5.2.1</elasticsearch.version>
         <lucence.version>6.3.0</lucence.version>
         <junit.version>4.12</junit.version>
         <elasticsearch.assembly.descriptor>${basedir}/src/main/assemblies/plugin.xml</elasticsearch.assembly.descriptor>
